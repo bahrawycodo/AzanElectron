@@ -1,0 +1,51 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 672 180" width="672" height="180">
+	<title>CallerTitle-svg</title>
+	<defs>
+		<linearGradient id="g1" x2="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(0,-106.921,382.539,0,336.096,143.459)">
+			<stop offset="0" stop-color="#056259" stop-opacity="1"/>
+			<stop offset="1" stop-color="#00776c" stop-opacity="0"/>
+		</linearGradient>
+	</defs>
+	<style>
+		.s0 { fill: #0cad9e } 
+		.s1 { fill: #e5d788 } 
+		.s2 { opacity: .3;fill: url(#g1) } 
+	</style>
+	<g id="bd956651-407f-45a5-b200-196db75b67e6">
+	</g>
+	<g id="e59cb05e-6464-40a0-9c4a-09f1d79ceda2">
+	</g>
+	<g id="Layer">
+		<g id="Layer">
+			<g id="Layer">
+				<path id="Layer" class="s0" d="m560.3 177.4h-1-441.3-1l-0.8-0.8-85.5-84.9-1.7-1.8 1.7-1.8 85.5-84.7 0.8-0.8h1 441.3 1l0.8 0.8 80.4 85.1 1.7 1.8-1.7 1.7-80.4 84.6z"/>
+			</g>
+			<g id="Layer">
+				<path id="Layer" fill-rule="evenodd" class="s1" d="m115.9 0.1h445.5l1.5 1.6 83.7 88.6-3.3 3.4-81.9 86.2h-445.5l-1.4-1.5-89.1-88.5 3.6-3.5zm2 5l-85.4 84.7 85.4 85h441.3l80.5-84.6-80.5-85.1z"/>
+			</g>
+			<g id="Gradient_Overlay">
+				<path id="Layer" class="s2" d="m118 5.1h441.2l80.5 85.2-80.5 84.6h-441.2l-85.5-85z"/>
+			</g>
+		</g>
+	</g>
+	<g id="Layer">
+		<g id="Layer">
+			<g id="Layer">
+				<path id="Layer" class="s0" d="m626.9 132.5l-1.8-1.7-39.6-38.4-1.8-1.8 1.8-1.8 38.4-39.5 1.7-1.8 1.8 1.7 39.6 38.4 1.7 1.8-1.7 1.8-38.4 39.5z"/>
+			</g>
+			<g id="Layer">
+				<path id="Layer" fill-rule="evenodd" class="s1" d="m625.5 44l3.6 3.4 43.2 41.9-3.5 3.6-41.9 43.2-3.6-3.5-43.1-41.9zm0.1 7.1l-38.4 39.5 39.6 38.4 38.4-39.5z"/>
+			</g>
+		</g>
+	</g>
+	<g id="Layer">
+		<g id="Layer">
+			<g id="Layer">
+				<path id="Layer" class="s0" d="m46.8 132.5l-1.7-1.7-39.6-38.4-1.8-1.8 1.7-1.8 38.4-39.5 1.8-1.8 1.8 1.7 39.5 38.4 1.8 1.8-1.7 1.8-38.4 39.5z"/>
+			</g>
+			<g id="Layer">
+				<path id="Layer" fill-rule="evenodd" class="s1" d="m45.5 44l3.6 3.4 43.2 41.9-3.5 3.6-41.9 43.2-3.6-3.5-43.1-41.9zm0.1 7.1l-38.4 39.5 39.5 38.4 38.4-39.5z"/>
+			</g>
+		</g>
+	</g>
+</svg>

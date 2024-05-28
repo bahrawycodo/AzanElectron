@@ -1,0 +1,1091 @@
+/* Reset */
+:where(
+    :not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)
+  ) {
+  all: unset;
+  display: revert;
+}
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+a,
+button {
+  cursor: revert;
+}
+menu,
+ol,
+summary,
+ul {
+  list-style: none;
+}
+img {
+  max-inline-size: 100%;
+  max-block-size: 100%;
+}
+table {
+  border-collapse: collapse;
+}
+input,
+textarea {
+  -webkit-user-select: auto;
+}
+textarea {
+  white-space: revert;
+}
+meter {
+  -webkit-appearance: revert;
+  appearance: revert;
+}
+:where(pre) {
+  all: revert;
+  box-sizing: border-box;
+}
+::placeholder {
+  color: unset;
+}
+:where([hidden]) {
+  display: none;
+}
+:where([contenteditable]:not([contenteditable="false"])) {
+  -moz-user-modify: read-write;
+  -webkit-user-modify: read-write;
+  overflow-wrap: break-word;
+  -webkit-line-break: after-white-space;
+  -webkit-user-select: auto;
+}
+:where([draggable="true"]) {
+  -webkit-user-drag: element;
+}
+:where(dialog:modal) {
+  all: revert;
+  box-sizing: border-box;
+}
+::-webkit-details-marker {
+  display: none;
+}
+
+/* General */
+@font-face {
+  font-family: Naskh;
+  src: url(../fonts/Naskh.otf);
+}
+@font-face {
+  font-family: RubikBold;
+  src: url(../fonts/rubik/Rubik-Bold.ttf);
+}
+@font-face {
+  font-family: RubikReg;
+  src: url(../fonts/rubik/Rubik-Regular.ttf);
+}
+@font-face {
+  font-family: RubikMed;
+  src: url(../fonts/rubik/Rubik-Medium.ttf);
+}
+:root {
+  --main-color: #08a39f;
+  --font-primary: Naskh;
+}
+.h-100 {
+  height: 100%;
+}
+.ml-1 {
+  margin-left: 0.5rem;
+}
+.ml-2 {
+  margin-left: 1rem;
+}
+.mx-1 {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+.mx-2 {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+.mb-2 {
+  margin-bottom: 1rem;
+}
+.gap-1 {
+  gap: 0.5rem;
+}
+.gap-2 {
+  gap: 1rem;
+}
+.gap-3 {
+  gap: 1.5rem;
+}
+.gap-4 {
+  gap: 2rem;
+}
+.cp {
+  cursor: pointer;
+}
+.b {
+  font-weight: bold;
+  font-family: RubikBold;
+}
+body {
+  background: #fff;
+  direction: rtl;
+  font-family: RubikReg;
+  overflow: hidden;
+}
+.d-flex {
+  display: flex;
+}
+.f-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.justify-content-center {
+  justify-content: center;
+}
+.align-items-center {
+  align-items: center;
+}
+.flex-direction-column {
+  flex-direction: column;
+}
+.grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+  display: grid;
+}
+.position-relative {
+  position: relative;
+}
+.position-absolute {
+  position: absolute;
+}
+.container {
+  width: 80%;
+  margin: auto;
+}
+.container-fluid {
+  width: 94%;
+  margin: auto;
+}
+.customSelect {
+  position: relative;
+  min-width: 220px;
+}
+.customSelect select {
+  display: none;
+}
+.customSelect label {
+  background: var(--main-color);
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+  padding: 7px 15px;
+  font-size: 22px;
+  border-radius: 8px;
+  align-items: center;
+}
+.customSelect.small label {
+  padding: 3px 15px;
+}
+.customSelect.dark label {
+  background: #004b44;
+}
+.customSelect label > .updown {
+  font-size: 10px;
+}
+.customSelect label > span {
+  display: flex;
+  align-items: center;
+}
+.customSelect label > span i {
+  font-size: 18px;
+}
+.customSelect ul {
+  max-height: 300px;
+  width: 100%;
+  position: absolute;
+  border: 1px solid var(--main-color);
+  border-top: 0;
+  top: 100%;
+  border-radius: 10px;
+  z-index: 9999;
+  background: #fff;
+  overflow: auto;
+}
+.customSelect ul li {
+  list-style-type: none;
+  color: var(--main-color);
+  padding: 10px;
+  font-family: RubikReg;
+  border-bottom: 1px solid var(--main-color);
+}
+.customSelect ul li:last-child {
+  border-bottom: 0;
+}
+section.general {
+  height: 100vh;
+  width: 100vw;
+  max-width: 100%;
+  position: relative;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+}
+.btn {
+  cursor: pointer;
+  position: relative;
+  min-width: 150px;
+  text-align: center;
+  font-family: RubikMed;
+}
+.btn-custom {
+  background: linear-gradient(to right, #f37044, #f9b343) padding-box,
+    linear-gradient(to left, #f37044, #f9b343) border-box;
+  border-radius: 20px;
+  padding: 6px 15px;
+  color: #fff;
+  font-size: 20px;
+  border: 2px solid transparent;
+}
+
+.CityLanguageScreen .content {
+  background-size: 100% 100% !important;
+  background-repeat: no-repeat !important;
+  width: 40%;
+  height: 100%;
+  float: left;
+}
+
+.PrayersScreen:before,
+.PrayersScreen:after {
+  content: "";
+  position: absolute;
+  background: url(../../images/PrayersPattern.png);
+  background-repeat: repeat;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  background-size: contain;
+  z-index: -1;
+}
+.PrayersScreen:after {
+  background: url(../../images/prayersback.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  opacity: 0.8;
+}
+.PrayersScreen .top .content {
+  flex-direction: column;
+}
+.PrayersScreen .top .content .customSelect {
+  margin-top: 3rem;
+}
+.PrayersScreen .top .subcontent {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+.PrayersScreen .top .content .main-text span {
+  font-size: 1.2rem;
+}
+.PrayersScreen .top .content h5 {
+  color: #ffc000;
+  font-size: 5rem;
+  font-weight: bold;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: baseline;
+}
+.PrayersScreen .top .content h5 span {
+  color: #fff;
+  font-size: 1.4rem;
+}
+.PrayersScreen .top .content h6 {
+  font-size: 1.2rem;
+  line-height: 30px;
+}
+.PrayersScreen .top .content h6 .week-day {
+  color: #fbdb28;
+}
+.PrayersScreen .bottom {
+  height: 34vh;
+}
+.prayers {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 5rem;
+  position: relative;
+  padding-top: 2%;
+}
+.prayers .prayer {
+  position: relative;
+  max-width: 150px;
+  height: auto;
+}
+.prayer {
+  --color-stop: #056259;
+  --color-bot: #00776c;
+  --main-color: #0aa092;
+}
+.prayers .prayer svg {
+  width: 100%;
+}
+.PrayersScreen .customSelect label {
+  background: #136e5e;
+}
+.prayers .prayer .content {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  top: 1rem;
+  height: calc(100% - 1.2rem);
+  flex-direction: column;
+  color: #fff;
+  gap: 0.8rem;
+  justify-content: center;
+}
+.prayers .prayer .content i {
+  font-size: 1.4rem;
+}
+.prayers .prayer .content h6 {
+  font-size: 1.4rem;
+}
+
+.prayers .prayer .content h5 {
+  font-size: 1.4rem;
+  font-weight: bold;
+  direction: ltr;
+}
+.prayers .prayer .content h5 span {
+  font-size: 12px;
+  margin-left: 0.2rem;
+}
+.PrayersScreen .top {
+  --color-stop: #136e5e;
+  --main-color: #003935;
+  --stroke-color: #0cad9e;
+}
+.PrayersScreen .top {
+  height: 66vh;
+  position: relative;
+}
+.PrayersScreen .top .layer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background-image: url(../../images/prayerstop.svg);
+  background-size: auto 180%;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+}
+.PrayersScreen .top .layer img {
+  width: 100%;
+  height: 100%;
+  mix-blend-mode: overlay;
+  opacity: 1;
+  position: relative;
+  top: -7%;
+  left: -7%;
+  border-bottom-left-radius: 50%;
+}
+.PrayersScreen .top .layer:after {
+  content: "";
+  position: absolute;
+  bottom: -9px;
+  right: 10%;
+  background-image: url("../../images/prayerlight.png");
+  background-repeat: no-repeat;
+  width: 80%;
+  height: 100px;
+  mix-blend-mode: lighten;
+}
+/* remainingTime */
+.remainingTime > .top,
+.remainingTime > .bottom {
+  height: 50vh;
+}
+.remainingTime > .top {
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  background-position-y: center !important;
+}
+.remainingTime > .bottom {
+  border-top: 12px solid #89cabb;
+  position: relative;
+}
+.remainingTime > .bottom .title {
+  background: url(../../images/Title.png) no-repeat center;
+  background-size: 100% 100%;
+  width: 320px;
+  height: 80px;
+  position: absolute;
+  right: calc(50vw - 160px);
+  top: -45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #074342;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+.remainingTime .bottom .content h5 {
+  color: #fff;
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+.remainingTime .bottom .footer {
+  border-radius: 0px 0px 20px 20px;
+  background: linear-gradient(
+    0deg,
+    rgba(0, 74, 70, 1) 0%,
+    rgba(26, 125, 123, 1) 100%
+  );
+  width: 100%;
+  height: 50px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  position: absolute;
+  bottom: 20px;
+}
+.remainingTime .bottom .footer span {
+  color: #e4c828;
+  margin: 0 0.5rem;
+}
+.remainingTime .bottom .footer span.prayerAF {
+  margin: 0 0 0 0.5rem;
+}
+.remainingTime .bottom .layer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(3, 126, 123, 1) 0%,
+    rgba(12, 173, 158, 1) 100%
+  );
+  z-index: 0;
+}
+.remainingTime .bottom .layer img {
+  width: 100%;
+  height: 100%;
+  mix-blend-mode: multiply;
+  opacity: 1;
+  position: relative;
+  top: -7%;
+  left: -7%;
+  border-bottom-left-radius: 50%;
+}
+.remainingTime .bottom .layer:after {
+  content: "";
+  position: absolute;
+  background: url(../../images/PrayersPattern.png);
+  background-repeat: repeat;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  background-size: contain;
+  z-index: 0;
+}
+.remainingTime .bottom .content {
+  text-align: center;
+  align-items: center;
+}
+
+.remainingTime .bottom .content .TimeCounter .Time .value,
+.remainingTime .bottom .content .TimeCounter .Time .seperator {
+  color: #edcf2b;
+  font-size: 4rem;
+}
+.remainingTime .bottom .content .TimeCounter .Time .seperator {
+  font-size: 3rem;
+}
+.remainingTime .bottom .content .TimeCounter .Time {
+  color: #044c4a;
+  font-size: 1.6rem;
+}
+.remainingTime .top {
+  color: #fff;
+}
+.remainingTime .top .content {
+  display: flex;
+  justify-content: space-around;
+  height: 40%;
+  position: absolute;
+  width: 40%;
+  left: 10%;
+  top: 20%;
+  flex-direction: column;
+  align-items: start;
+}
+.remainingTime .top .main-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.remainingTime .top .main-text .right {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+.remainingTime .top .main-text span {
+  font-size: 1rem;
+}
+.remainingTime .top h5 {
+  color: #e5d788;
+  font-size: 3.4rem;
+  font-weight: bold;
+}
+.remainingTime .top h5 span {
+  color: #fff;
+  font-size: 1.4rem;
+}
+.remainingTime .top h6 {
+  font-size: 1.2rem;
+  line-height: 30px;
+  justify-content: end;
+  width: 100%;
+}
+.remainingTime .top h6 span {
+  color: #fbdb28;
+}
+.Caller.general {
+  background: linear-gradient(
+    180deg,
+    rgba(3, 116, 113, 1) 0%,
+    rgba(3, 126, 123, 1) 100%
+  );
+}
+.Caller.general .layer {
+  background-repeat: repeat !important;
+  background-size: 50px !important;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  mix-blend-mode: soft-light;
+  opacity: 0.3;
+}
+.Caller .top {
+  border-bottom: 2px solid #fff;
+}
+.Caller .top,
+.Caller .top .container > .right {
+  height: 66vh !important;
+}
+.Caller .bottom {
+  height: 34vh;
+}
+.Caller .bottom .prayers {
+  height: 100%;
+}
+.prayer.active {
+  --color-stop: #f37044;
+  --color-bot: #f9b343;
+  --main-color: #f9b343;
+  scale: 1.1;
+}
+.Caller .top .left {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 2rem;
+  position: relative;
+}
+.Caller .top .left .main-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Caller .top .left .main-text .right {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+.Caller .top .left .main-text span {
+  font-size: 1rem;
+  color: #fff;
+}
+.Caller .top .left h5 {
+  color: #e5d788;
+  font-size: 4.2rem;
+  font-weight: bold;
+}
+.Caller .top .left h5 span {
+  color: #fff;
+  font-size: 1.4rem;
+}
+.Caller .top .left h6 {
+  font-size: 1.2rem;
+  line-height: 30px;
+  width: 100%;
+  justify-content: center;
+  text-align: right;
+  color: #fff;
+}
+.Caller .top .left h6 span {
+  color: #fbdb28;
+}
+.Caller .top .left .CallerName {
+  width: 100%;
+  background: url(../../images/CallerTitle.svg) no-repeat;
+  background-size: auto;
+  background-size: 100% 100%;
+  max-width: 300px;
+  height: 82px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  color: #fff;
+}
+.Caller .top .left .CallerName span {
+  margin: 0 0.5rem;
+}
+.Caller .top .left h2 {
+  color: #e5d788;
+  text-align: center;
+  font-size: 1.8rem;
+}
+.Caller .top .container > .right {
+  text-align: center;
+}
+.Caller .top .container > .right img {
+  margin-top: 2%;
+  width: auto;
+  height: 90%;
+}
+.Caller .top .container > .right span {
+  color: #fff;
+}
+.Caller .top .container > .right span:first-child {
+  top: 16%;
+  right: 3%;
+  font-size: 1.4rem;
+}
+.Caller .top .container > .right span:last-child {
+  bottom: 30%;
+  left: 3%;
+  font-size: 1rem;
+}
+.Azkar {
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(180deg, #089a8f, rgba(146, 205, 205, 1) 100%);
+  position: relative;
+}
+.Azkar:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: url(../../images/azkarFooter.svg) no-repeat;
+  height: 73vh;
+  background-size: 110% auto;
+  background-position-y: top;
+}
+.Azkar .clouds::before,
+.Azkar .clouds::after {
+  content: "";
+  position: absolute;
+  width: 30%;
+  height: 7vh;
+  background-size: 100% 100% !important;
+  opacity: 0.25;
+  mix-blend-mode: screen;
+}
+.Azkar .clouds::before {
+  background: url(../../images/cloudtop.png) no-repeat;
+  top: 5%;
+  left: 2%;
+}
+.Azkar .clouds::after {
+  top: 20%;
+  right: 2%;
+  background: url(../../images/cloudbottom.png) no-repeat;
+}
+.Azkar .container {
+  padding-top: 2%;
+}
+.Azkar .title {
+  background: url(../../images/Title.png) no-repeat center;
+  background-size: auto;
+  background-size: 100% 100%;
+  width: 320px;
+  height: 80px;
+  font-size: 1.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #483251;
+  font-weight: bold;
+  margin: auto;
+  margin-bottom: 1rem;
+}
+.Azkar p {
+  text-align: center;
+  font-size: 1.4rem;
+  color: #fff;
+  line-height: 42px;
+}
+.remainingTimeToPray .top {
+  background: url(../../images/remainingTimeToPray.png) no-repeat;
+  background-size: 100% 100%;
+  width: 100vw;
+  height: 85vh;
+}
+.remainingTimeToPray .top .container {
+  padding-top: 15vh;
+}
+.remainingTimeToPray .top .title {
+  background: url(../../images/Title.png) no-repeat center;
+  background-size: auto;
+  background-size: 100% 100%;
+  width: 320px;
+  height: 70px;
+  font-size: 1.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #704713;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+.remainingTimeToPray .footer {
+  background: #089a8f;
+  height: 15vh;
+  width: 100vw;
+  position: relative;
+}
+.remainingTimeToPray .footer:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 60%;
+  background: url(../../images/remainingTimeToPrayPattern.svg) no-repeat;
+  background-size: cover;
+  mix-blend-mode: color-dodge;
+  opacity: 0.27;
+}
+.remainingTimeToPray .footer .container {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.remainingTimeToPray .footer p {
+  width: 60%;
+  font-size: 1.2rem;
+  color: #fff;
+  line-height: 2rem;
+  font-weight: bold;
+}
+.remainingTimeToPray .footer img {
+  position: absolute;
+  width: 40%;
+  left: 0;
+  bottom: 0;
+  max-height: fit-content;
+}
+/* Timer */
+.timerContainer {
+  position: relative;
+  width: 320px;
+  text-align: center;
+}
+.timerContainer svg {
+  width: 80%;
+}
+.timerContainer .controls {
+  position: absolute;
+  left: 75px;
+  top: 105px;
+  text-align: center;
+  width: 100%;
+  left: 0;
+  height: 100%;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  direction: ltr;
+}
+
+.timerContainer .controls .timerTitle {
+  display: flex;
+  justify-content: center;
+  gap: 4.6rem;
+}
+.timerContainer .controls .timerTitle span {
+  color: #044c4a;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.timerContainer .display-remain-time {
+  font-weight: 100;
+  font-size: 3rem;
+  color: #089a8f;
+  font-weight: bold;
+}
+.timerContainer .e-c-base {
+  stroke: #e2e2e2;
+  stroke-width: 6px;
+}
+
+.e-c-progress {
+  fill: none;
+  stroke: #13c8c3;
+  stroke-width: 8px;
+  transition: stroke-dashoffset 0.7s;
+  stroke-linecap: round;
+}
+.reminderPerformingPrayer .right,
+.reminderPerformingPrayer .left {
+  width: 50vw;
+  height: 100vh;
+}
+.reminderPerformingPrayer .right {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.reminderPerformingPrayer .right::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+  background: #037a77;
+}
+.reminderPerformingPrayer .right:after {
+  content: "";
+  position: absolute;
+  background: url(../../images/reminderPerformingPrayerpattern2.svg) no-repeat;
+  height: 100%;
+  width: 30px;
+  background-size: cover;
+  left: 10px;
+}
+.reminderPerformingPrayer .right .mainMosque {
+  position: absolute;
+  height: 90%;
+  top: 48.3%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.reminderPerformingPrayer .left {
+  background: #037a77;
+  position: relative;
+}
+.reminderPerformingPrayer .left:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: url(../../images/reminderPerformingPrayerPattern.svg) no-repeat;
+  background-size: cover;
+}
+.reminderPerformingPrayer .left .container:not(.footer) {
+  display: flex;
+  position: relative;
+  align-items: center;
+  height: calc(100% - 3rem);
+  flex-direction: column;
+  gap: 5rem;
+  padding-top: 5rem;
+}
+.reminderPerformingPrayer .left .title {
+  background: url(../../images/Title.png) no-repeat center;
+  background-size: auto;
+  background-size: 100% 100%;
+  width: 320px;
+  height: 70px;
+  font-size: 1.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #074342;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+.reminderPerformingPrayer .left .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+}
+.reminderPerformingPrayer .left p {
+  color: #fff;
+  font-size: 1.4rem;
+  line-height: 2rem;
+}
+.reminderPerformingPrayer .left h6 {
+  font-size: 3rem;
+  color: #e1c93a;
+  font-weight: bold;
+}
+.reminderPerformingPrayer .left p.footer {
+  text-align: left;
+}
+.AzkarAfterPrayer .top {
+  height: calc(50% - 2px);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+.AzkarAfterPrayer .line {
+  background: #fbe3b3;
+  height: 4px;
+  width: 100%;
+  position: relative;
+}
+.AzkarAfterPrayer .line::after {
+  content: "";
+  position: absolute;
+  left: 2%;
+  top: -29px;
+  width: 180px;
+  height: 60px;
+  background: url(../../images/AzkarAfterPrayerLineLeft.png) no-repeat;
+  background-size: 100% 100%;
+}
+.AzkarAfterPrayer .line::before {
+  content: "";
+  position: absolute;
+  right: 2%;
+  top: -14px;
+  width: 150px;
+  height: 30px;
+  background: url(../../images/AzkarAfterPrayerLineRight.png) no-repeat;
+  background-size: 100% 100%;
+}
+.AzkarAfterPrayer .bottom {
+  height: calc(50% - 2px);
+  position: relative;
+  background: linear-gradient(
+    180deg,
+    rgba(2, 101, 98, 1) 0%,
+    rgba(3, 126, 123, 1) 100%
+  );
+  border-bottom: 4px solid #fbe3b3;
+}
+.AzkarAfterPrayer .bottom:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: url(../../images/azkarAfterPrayerPattern.png) no-repeat;
+  background-size: cover;
+  mix-blend-mode: screen;
+}
+.AzkarAfterPrayer .bottom::after {
+  content: "";
+  position: absolute;
+  left: 2%;
+  bottom: -14px;
+  width: 150px;
+  height: 30px;
+  background: url(../../images/AzkarAfterPrayerLineRight.png) no-repeat;
+  background-size: 100% 100%;
+}
+.AzkarAfterPrayer .bottom .title {
+  background: url(../../images/Title.png) no-repeat center;
+  background-size: auto;
+  background-size: 100% 100%;
+  width: 400px;
+  height: 80px;
+  font-size: 1.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #074342;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  position: absolute;
+  top: -41px;
+  right: calc(50% - 200px);
+}
+.AzkarAfterPrayer .bottom .azkarList {
+  margin-top: 50px;
+  display: inline-block;
+}
+.AzkarAfterPrayer .bottom .azkarList li {
+  color: #fff;
+  padding-right: 40px;
+  list-style-type: none;
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  height: 45px;
+  line-height: 1.2rem;
+  font-size: 0.9rem;
+}
+.AzkarAfterPrayer .bottom .azkarList li::before {
+  content: attr(data-number);
+  position: absolute;
+  background: url(../../images/AzkarAfterPrayerListIcon.png) no-repeat;
+  background-size: 100% 100%;
+  top: 0;
+  right: 0;
+  width: 30px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000;
+}
+.AzkarAfterPrayer .bottom .points {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.AzkarAfterPrayer .bottom .points li {
+  height: 15px;
+  width: 15px;
+  background-image: url(../../images/AzkarAfterPrayerpoint.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  margin: 0 3px;
+  cursor: pointer;
+}
+.AzkarAfterPrayer .bottom .points li.active {
+  background-image: url(../../images/AzkarAfterPrayeractivepoint.png);
+  width: 20px;
+  height: 20px;
+}

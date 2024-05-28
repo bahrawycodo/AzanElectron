@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="3072" height="1291" viewBox="0 0 3072 1291">
+  <defs>
+    <radialGradient id="radial-gradient" cx="0.5" cy="0.5" r="0.75" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#136e5e"/>
+      <stop offset="1" stop-color="#136e5e" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <g id="Ellipse_1" data-name="Ellipse 1" transform="translate(-1465 266)">
+    <g id="Ellipse_1-2" data-name="Ellipse 1" transform="translate(1490 -241)" fill="#003935" stroke="#0cad9e" stroke-width="25">
+      <ellipse cx="1511" cy="620.5" rx="1511" ry="620.5" stroke="none"/>
+      <ellipse cx="1511" cy="620.5" rx="1523.5" ry="633" fill="none"/>
+    </g>
+    <path id="Gradient_Overlay" data-name="Gradient Overlay" d="M3001-241c834.5,0,1511,277.807,1511,620.5S3835.5,1000,3001,1000,1490,722.193,1490,379.5,2166.5-241,3001-241Z" fill="url(#radial-gradient)"/>
+  </g>
+</svg>
